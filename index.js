@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://mern-social-frontend-zeta.vercel.app/",
     credentials: true,
   })
 );
