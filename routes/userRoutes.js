@@ -32,7 +32,7 @@ router.post("/forgotpassword", async (req, res) => {
     await user.save();
 
     // const resetUrl = `http://localhost:5173/reset-password/${token}`;
-    const resetUrl = `https://mern-social-frontend-zeta.vercel.app/reset-password/${token}`
+    const resetUrl = `https://social-frontend-woad.vercel.app/reset-password/${token}`
 
     const message = `
       You are receiving this email because you (or someone else) has requested the reset of a password.
