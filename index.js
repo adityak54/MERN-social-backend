@@ -8,15 +8,13 @@ const postRouter = require("./routes/postRoutes");
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(
-  cors({
-    origin: "https://social-frontend-woad.vercel.app",
-    credentials: true, // Enable credentials (cookies, authorization headers)
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
-    allowedHeaders: ["Content-Type", "Authorization"],
-    optionsSuccessStatus: 200, // Some legacy browsers (IE11, various SmartTVs) choke on 204
-  })
-);
+// app.use(
+//   cors({
+//     origin: "*",
+//     credentials: true, // Enable credentials (cookies, authorization headers)
+//   })
+// );
+app.use(cors());
 connect();
 
 app.use(express.json());
