@@ -10,8 +10,11 @@ const port = process.env.PORT || 3000;
 
 app.use(
   cors({
-    origin: "https://mern-social-frontend-zeta.vercel.app/",
+    origin: "https://mern-social-frontend-zeta.vercel.app",
     credentials: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    allowedHeaders: ["Content-Type", "Authorization"],
+    optionsSuccessStatus: 200, // Some legacy browsers (IE11, various SmartTVs) choke on 204
   })
 );
 
