@@ -11,8 +11,8 @@ const sendEmail = async (emailTo, subject, text) => {
       port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: 'avery.macgyver94@ethereal.email',
-        pass: 'xH96Xmb2TVQ6XTeMUv'
+        user: process.env.USER,
+        pass: process.env.PASSWORD
       },
     });
 
